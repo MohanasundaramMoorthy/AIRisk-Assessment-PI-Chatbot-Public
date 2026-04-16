@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# Local dev / test files
+retrieval_test.py
+extract_index.py
+lambda_function.py
+Advice_Summary.index.json
+Advice_Summary_index.json
+Advice_Summary.docx
+~$*.docx
+
+# Lambda packaging
+*.zip
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
