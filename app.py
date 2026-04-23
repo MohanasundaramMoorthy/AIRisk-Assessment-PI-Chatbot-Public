@@ -1,7 +1,11 @@
 import streamlit as st
 import requests
 
-API_URL = "https://2gt339l3ia.execute-api.us-east-1.amazonaws.com/query"
+# API endpoint is stored in Streamlit secrets (secrets.toml locally,
+# or the Streamlit Cloud dashboard in production).
+# Set:  [api]
+#       url = "https://<your-api-gateway-id>.execute-api.<region>.amazonaws.com/query"
+API_URL = st.secrets["api"]["url"]
 
 st.set_page_config(page_title="AI Risk Management Toolkit — Q&A", page_icon="🤖", layout="wide")
 

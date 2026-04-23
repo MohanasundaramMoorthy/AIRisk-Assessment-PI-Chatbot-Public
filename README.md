@@ -230,14 +230,15 @@ Error handling:
 ### Backend
 
 Update index:
-aws s3 cp Advice_Summary.index.json 
-s3://amzn-s3-bucket-ai-risk-summary/indexes/Advice_Summary_index.json
+aws s3 cp Advice_Summary.index.json \
+  s3://<your-s3-bucket>/indexes/Advice_Summary_index.json
+
 Deploy Lambda:
 zip lambda_deployment.zip lambda_function.py
 
-aws lambda update-function-code 
-–function-name page_index_chatbot_lambda 
-–zip-file fileb://lambda_deployment.zip
+aws lambda update-function-code \
+  --function-name <your-lambda-function-name> \
+  --zip-file fileb://lambda_deployment.zip
 ---
 
 ### Frontend
