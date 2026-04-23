@@ -16,6 +16,11 @@ Advice_Summary.docx
 # Lambda packaging
 *.zip
 
+# Logs and temp
+*.log
+tmp/
+*.cache
+
 # macOS
 .DS_Store
 

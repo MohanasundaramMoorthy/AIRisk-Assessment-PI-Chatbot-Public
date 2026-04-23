@@ -63,10 +63,10 @@ if ask_clicked:
                     st.session_state.result = response.json()
                     st.session_state.api_error = None
             except requests.exceptions.Timeout:
-                st.session_state.api_error = "Request timed out. The API took too long to respond. Please try again."
+                st.session_state.api_error = "The request took too long. Please try again."
                 st.session_state.result = None
-            except requests.exceptions.RequestException as e:
-                st.session_state.api_error = str(e)
+            except requests.exceptions.RequestException:
+                st.session_state.api_error = "Unable to connect to the service. Please try again."
                 st.session_state.result = None
 
 # ── Display ───────────────────────────────────────────────────────────────────
